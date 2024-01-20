@@ -77,6 +77,72 @@ margin_right = 144.0
 margin_bottom = 56.0
 text = "Back"
 
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 208.0
+margin_top = 72.0
+margin_right = -208.0
+margin_bottom = -272.0
+align = 1
+valign = 1
+autowrap = true
+
+[node name="MoreLikelyYesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -448.0
+margin_top = -256.0
+margin_right = -160.0
+margin_bottom = -144.0
+text = "More likely yes"
+
+[node name="DoNotKnowButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -256.0
+margin_right = 144.0
+margin_bottom = -144.0
+text = "Don't know"
+
+[node name="MoreLikelyNoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 160.0
+margin_top = -256.0
+margin_right = 448.0
+margin_bottom = -144.0
+text = "More likely no"
+
+[node name="YesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -296.0
+margin_top = -128.0
+margin_right = -8.0
+margin_bottom = -16.0
+text = "YES"
+
+[node name="NoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -128.0
+margin_right = 296.0
+margin_bottom = -16.0
+text = "No"
+
 [node name="About" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
