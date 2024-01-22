@@ -1,6 +1,35 @@
-[gd_resource type="Theme" load_steps=2 format=2]
+[gd_resource type="Theme" load_steps=8 format=2]
 
 [ext_resource path="res://game/resources/theme/fonts/types/default_dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/resources/theme/styles/normal_style.tres" type="StyleBox" id=2]
+[ext_resource path="res://game/resources/theme/styles/pressed_style.tres" type="StyleBox" id=3]
+[ext_resource path="res://game/resources/theme/styles/empty_style.tres" type="StyleBox" id=4]
+[ext_resource path="res://game/resources/theme/styles/panel_style.tres" type="StyleBox" id=5]
+[ext_resource path="res://game/resources/theme/styles/fg_style.tres" type="StyleBox" id=6]
+[ext_resource path="res://game/resources/theme/styles/bg_style.tres" type="StyleBox" id=7]
 
 [resource]
 default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
+Button/colors/font_color_disabled = Color( 0.8, 0.8, 0.8, 1 )
+Button/colors/font_color_focus = Color( 0.8, 0.8, 0.8, 1 )
+Button/colors/font_color_hover = Color( 0.8, 0.8, 0.8, 1 )
+Button/colors/font_color_pressed = Color( 0.466667, 0.466667, 0.466667, 1 )
+Button/constants/hseparation = 10
+Button/styles/disabled = ExtResource( 3 )
+Button/styles/focus = ExtResource( 4 )
+Button/styles/hover = ExtResource( 2 )
+Button/styles/normal = ExtResource( 2 )
+Button/styles/pressed = ExtResource( 3 )
+Label/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 0, 0, 0, 0 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Panel/styles/panel = ExtResource( 5 )
+ProgressBar/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+ProgressBar/styles/bg = ExtResource( 7 )
+ProgressBar/styles/fg = ExtResource( 6 )
