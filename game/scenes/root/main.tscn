@@ -33,11 +33,12 @@ __meta__ = {
 }
 
 [node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
+[node name="GameNameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -50,7 +51,7 @@ text = "Which Character Are You"
 align = 1
 valign = 1
 
-[node name="Control" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
+[node name="MainMenu" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -60,7 +61,7 @@ margin_top = 16.0
 margin_right = 200.0
 margin_bottom = 192.0
 
-[node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control"]
+[node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -70,7 +71,7 @@ margin_top = -88.0
 margin_right = -8.0
 margin_bottom = 48.0
 
-[node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/PlayPanel"]
+[node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -81,7 +82,7 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Play"
 
-[node name="DecorativePanels" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/PlayPanel"]
+[node name="DecorativePanels" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -90,20 +91,20 @@ margin_left = -128.0
 margin_top = 8.0
 margin_bottom = 32.0
 
-[node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/PlayPanel/DecorativePanels"]
+[node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/DecorativePanels"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -128.0
 margin_bottom = 8.0
 
-[node name="DecorativePanel2" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/PlayPanel/DecorativePanels"]
+[node name="DecorativePanel2" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/DecorativePanels"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -64.0
 margin_top = 16.0
 margin_bottom = 24.0
 
-[node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control"]
+[node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -116,7 +117,7 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Settings"
 
-[node name="AboutButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/Control"]
+[node name="AboutButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -129,6 +130,17 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "About"
 
+[node name="QuitButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -128.0
+margin_top = -80.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "Quit"
+
 [node name="Survey" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -139,42 +151,29 @@ __meta__ = {
 }
 
 [node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
+[node name="ProgressBar" type="ProgressBar" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_right = 1.0
+margin_bottom = 56.0
+value = 43.0
+
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 margin_left = 16.0
-margin_top = 56.0
+margin_top = 72.0
 margin_right = 208.0
-margin_bottom = 136.0
+margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Back"
-
-[node name="ProgressBar" type="ProgressBar" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
-anchor_right = 1.0
-margin_bottom = 40.0
-value = 43.0
-percent_visible = false
-
-[node name="RestartButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -208.0
-margin_top = 56.0
-margin_right = -16.0
-margin_bottom = 136.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Restart"
 
 [node name="QuestionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 224.0
-margin_top = 56.0
+margin_top = 72.0
 margin_right = -224.0
 margin_bottom = -320.0
 custom_fonts/font = ExtResource( 5 )
@@ -182,6 +181,17 @@ text = "How are you?"
 align = 1
 valign = 1
 autowrap = true
+
+[node name="RestartButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -208.0
+margin_top = 72.0
+margin_right = -16.0
+margin_bottom = 152.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Restart"
 
 [node name="Answers" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_top = 1.0
@@ -194,10 +204,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -448.0
-margin_top = -96.0
-margin_right = -160.0
-margin_bottom = 16.0
+margin_left = -296.0
+margin_top = 32.0
+margin_right = -8.0
+margin_bottom = 144.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "More likely yes"
@@ -273,10 +283,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 160.0
-margin_top = -96.0
-margin_right = 448.0
-margin_bottom = 16.0
+margin_left = 8.0
+margin_top = 32.0
+margin_right = 296.0
+margin_bottom = 144.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "More likely no"
@@ -286,10 +296,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -296.0
-margin_top = 32.0
-margin_right = -8.0
-margin_bottom = 144.0
+margin_left = -448.0
+margin_top = -96.0
+margin_right = -160.0
+margin_bottom = 16.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Yes"
@@ -299,10 +309,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 8.0
-margin_top = 32.0
-margin_right = 296.0
-margin_bottom = 144.0
+margin_left = 160.0
+margin_top = -96.0
+margin_right = 448.0
+margin_bottom = 16.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "No"
@@ -393,9 +403,9 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Back"
 
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/Control/AboutButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "About" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "About" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Results/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
