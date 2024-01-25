@@ -6,3 +6,6 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
+shadow_color = Color( 0, 0, 0, 0.0627451 )
+shadow_size = 8
+anti_aliasing_size = 2.0
