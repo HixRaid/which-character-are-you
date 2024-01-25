@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=3]
 [ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=6]
 
 [node name="Main" type="Node"]
 
@@ -27,13 +28,12 @@ open_interface = "Menu"
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Menu"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -151,6 +151,7 @@ __meta__ = {
 }
 
 [node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -406,6 +407,7 @@ text = "Back"
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "About" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Results/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
