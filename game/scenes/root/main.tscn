@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=4]
 [ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=6]
+[ext_resource path="res://game/images/icon.png" type="Texture" id=7]
+[ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=8]
 
 [node name="Main" type="Node"]
 
@@ -56,10 +58,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = 16.0
-margin_right = 200.0
-margin_bottom = 192.0
+margin_left = -216.0
+margin_right = 216.0
+margin_bottom = 208.0
 
 [node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 anchor_left = 0.5
@@ -182,10 +183,13 @@ enabled_focus_mode = 0
 text = "Restart"
 
 [node name="Answers" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = -464.0
 margin_top = -320.0
+margin_right = 464.0
 
 [node name="MoreLikelyYesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -307,19 +311,42 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Menu"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+[node name="CharacterImage" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
 anchor_left = 0.5
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -400.0
-margin_top = 16.0
-margin_right = 400.0
-margin_bottom = -16.0
-scroll_horizontal_enabled = false
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -264.0
+margin_right = 128.0
+margin_bottom = -8.0
+texture = ExtResource( 7 )
+stretch_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Canvas/UI/InterfaceSwitch/Results/Panel/ScrollContainer"]
-margin_right = 800.0
-size_flags_horizontal = 3
+[node name="NameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = 8.0
+margin_right = -64.0
+margin_bottom = 56.0
+text = "Character name"
+align = 1
+valign = 1
+
+[node name="DescriptionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 72.0
+margin_right = -64.0
+margin_bottom = -16.0
+custom_fonts/font = ExtResource( 8 )
+text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, pariatur ex dignissimos eaque debitis qui ducimus repellat cumque natus nemo architecto expedita, praesentium assumenda quam iste at sint suscipit cupiditate harum inventore? Quisquam hic magnam animi dignissimos quasi perspiciatis quo amet, recusandae nemo distinctio error eveniet nisi expedita similique optio esse exercitationem, perferendis consequatur totam sapiente voluptatum praesentium velit. Animi obcaecati qui fugit harum repudiandae minus doloribus magni omnis, incidunt, amet voluptates pariatur tenetur autem repellat, sunt ducimus rerum provident cum!"
+align = 1
+autowrap = true
 
 [node name="About" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
