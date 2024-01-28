@@ -146,7 +146,7 @@ mouse_filter = 2
 [node name="ProgressBar" type="ProgressBar" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_right = 1.0
 margin_bottom = 56.0
-value = 43.0
+value = 50.0
 
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 margin_left = 16.0
