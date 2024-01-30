@@ -4,6 +4,8 @@ export var open_interface = ""
 var story = []
 var interfaces = {}
 
+const BACK = "Back"
+
 func _ready():
 	var children = get_children()
 	for i in children:
@@ -12,13 +14,21 @@ func _ready():
 	
 	story.append(open_interface)
 
+func _input(_event):
+	if Input.is_action_just_pressed("ui_cancel"):
+		set_visible_interface(BACK)
+
+func _notification(what):
+	if what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST:
+		set_visible_interface(BACK)
+
 func set_visible_interface(name):
 	if name == open_interface:
 		return
 	
 	if story.has(name) and interfaces.has(name):
 		story = story.slice(0, story.find(name))
-	elif name == "Back" and len(story) > 1:
+	elif name == BACK and len(story) > 1:
 		story = story.slice(0, len(story) - 2)
 	elif interfaces.has(name):
 		story.append(name)
