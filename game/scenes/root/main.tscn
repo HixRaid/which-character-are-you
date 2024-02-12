@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=6]
 [ext_resource path="res://game/images/icon.png" type="Texture" id=7]
 [ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=9]
 
 [node name="Main" type="Node"]
 
@@ -133,7 +134,7 @@ text = "Quit"
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -401,6 +402,12 @@ text = "Back"
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "About" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_restart"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyYesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_yes"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel/Button" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_do_not_know"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyNoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_no"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/YesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_yes"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/NoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_no"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Results/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]

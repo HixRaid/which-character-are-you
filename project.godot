@@ -16,6 +16,10 @@ run/main_scene="res://game/scenes/root/main.tscn"
 config/icon="res://game/images/icon.png"
 config/quit_on_go_back=false
 
+[autoload]
+
+Survey="*res://game/scenes/root/survey.tscn"
+
 [display]
 
 window/size/width=1280
