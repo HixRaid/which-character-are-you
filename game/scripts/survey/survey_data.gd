@@ -1,10 +1,10 @@
 extends Node
 
-var traits = [
+const TRAITS = [
 	"Trait 1", "Trait 2"
 ]
 
-var characters = [
+const CHARACTERS = [
 	{
 		"name": "Character 1",
 		"description": "Description 1",
@@ -22,7 +22,7 @@ var characters = [
 	}
 ]
 
-var questions = [
+const QUESTIONS = [
 	{
 		"question": "Question 1",
 		"positive": false,
