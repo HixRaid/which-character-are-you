@@ -5,6 +5,8 @@ onready var question_label = $Panel/QuestionLabel
 onready var do_not_know_label = $Panel/Answers/DoNotKnowPanel/Label
 onready var do_not_know_button = $Panel/Answers/DoNotKnowPanel/Button
 onready var interface_switch = $"%InterfaceSwitch"
+onready var result_interface = $"%Result"
+
 
 func _ready():
 	var _error = Survey.connect("finished", self, "_on_finished")
@@ -49,5 +51,6 @@ func _on_do_not_know():
 	update_data()
 
 
-func _on_finished():
-	interface_switch.set_visible_interface("Results")
+func _on_finished(result):
+	result_interface.set_character(result)
+	interface_switch.set_visible_interface("Result")

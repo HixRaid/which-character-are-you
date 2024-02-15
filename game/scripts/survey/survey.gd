@@ -1,6 +1,6 @@
 extends Node
 
-signal finished()
+signal finished(result)
 
 enum {
 	YES = 1,
@@ -45,8 +45,28 @@ func vote(vote):
 			add_vote(-0.5, question)
 	
 	if current_survey.passed == len(data.QUESTIONS):
-		emit_signal("finished")
+		emit_signal("finished", summarize())
 		start()
+
+
+func summarize():
+	var traits = []
+	for i in current_survey.traits:
+		traits.append(0.5 + i.value / i.count * 0.5)
+	
+	var min_score = 0xffffff
+	var min_score_character
+	
+	for i in data.CHARACTERS:
+		var score = 0
+		for j in range(len(i.traits)):
+			score += abs(traits[j] - i.traits[j])
+		
+		if score < min_score:
+			min_score = score
+			min_score_character = i
+	
+	return min_score_character
 
 
 func add_vote(value, question):

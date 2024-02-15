@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://game/images/icon.png" type="Texture" id=7]
 [ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=8]
 [ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=9]
+[ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=10]
 
 [node name="Main" type="Node"]
 
@@ -289,22 +290,23 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "No"
 
-[node name="Results" type="Control" parent="Canvas/UI/InterfaceSwitch"]
+[node name="Result" type="Control" parent="Canvas/UI/InterfaceSwitch"]
+unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Results"]
+[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Result"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 208.0
@@ -313,7 +315,7 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "Menu"
 
-[node name="CharacterImage" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+[node name="CharacterImage" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -325,7 +327,7 @@ margin_bottom = -8.0
 texture = ExtResource( 7 )
 stretch_mode = 1
 
-[node name="NameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+[node name="NameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
@@ -337,7 +339,7 @@ text = "Character name"
 align = 1
 valign = 1
 
-[node name="DescriptionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Results/Panel"]
+[node name="DescriptionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -409,6 +411,6 @@ text = "Back"
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyNoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_no"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/YesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_yes"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/NoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_no"]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Results/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
