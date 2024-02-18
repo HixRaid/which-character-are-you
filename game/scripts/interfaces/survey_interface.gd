@@ -6,6 +6,7 @@ onready var do_not_know_label = $Panel/Answers/DoNotKnowPanel/Label
 onready var do_not_know_button = $Panel/Answers/DoNotKnowPanel/Button
 onready var interface_switch = $"%InterfaceSwitch"
 onready var result_interface = $"%Result"
+onready var tween = $Tween
 
 
 func _ready():
@@ -18,6 +19,11 @@ func _ready():
 func update_data():
 	var question = Survey.get_next_question()
 	question_label.text = question.question
+	tween.interpolate_property(progress_bar, "value",
+			progress_bar.value, Survey.current_survey.passed, 0.25,
+			Tween.TRANS_QUART, Tween.EASE_OUT)
+	tween.start()
+
 	progress_bar.value = Survey.current_survey.passed
 
 

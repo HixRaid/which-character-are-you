@@ -7,6 +7,8 @@ export var open_interface = ""
 var story = []
 var interfaces = {}
 
+onready var animation_player = $"../AnimationPlayer"
+
 
 func _ready():
 	var children = get_children()
@@ -27,6 +29,12 @@ func _notification(what):
 		set_visible_interface(BACK)
 
 
+func _on_set_visible():
+	interfaces[open_interface].set_visibility(false)
+	open_interface = story[len(story) - 1]
+	interfaces[open_interface].set_visibility(true)
+
+
 func set_visible_interface(name):
 	if name == open_interface:
 		return
@@ -40,6 +48,5 @@ func set_visible_interface(name):
 	else:
 		return
 	
-	interfaces[open_interface].set_visibility(false)
-	open_interface = story[len(story) - 1]
-	interfaces[open_interface].set_visibility(true)
+	rect_pivot_offset = get_tree().root.get_visible_rect().size / 2
+	animation_player.play("play")

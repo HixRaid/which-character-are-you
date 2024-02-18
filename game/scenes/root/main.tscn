@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -11,6 +11,75 @@
 [ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=9]
 [ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=10]
 [ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("InterfaceSwitch:rect_scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("InterfaceSwitch:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "play"
+length = 0.4
+tracks/0/type = "method"
+tracks/0/path = NodePath("InterfaceSwitch")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_set_visible"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("InterfaceSwitch:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.5, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("InterfaceSwitch:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Main" type="Node"]
 
@@ -291,6 +360,8 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "No"
 
+[node name="Tween" type="Tween" parent="Canvas/UI/InterfaceSwitch/Survey"]
+
 [node name="Result" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 unique_name_in_owner = true
 anchor_right = 1.0
@@ -433,6 +504,10 @@ margin_bottom = 96.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "Back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
+anims/RESET = SubResource( 1 )
+anims/play = SubResource( 2 )
 
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
