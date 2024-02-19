@@ -3,15 +3,17 @@ extends Node
 signal finished(result)
 
 enum {
-	YES = 1,
-	NO = 2,
-	MORE_LIKELY_YES = 3,
-	MORE_LIKELY_NO = 4,
-	DO_NOT_KNOW = 5
+	YES = 0,
+	NO = 1,
+	MORE_LIKELY_YES = 2,
+	MORE_LIKELY_NO = 3,
+	DO_NOT_KNOW = 4
 }
 
 var current_survey = {
 	"traits": [],
+	"do_not_know": 0,
+	"max_do_not_know": 0,
 	"passed": 0
 }
 
@@ -20,6 +22,8 @@ onready var data = $Data
 
 func start():
 	current_survey.traits.clear()
+	current_survey.do_not_know = 0
+	current_survey.max_do_not_know = int(len(data.QUESTIONS) * 0.5)
 	current_survey.passed = 0
 	
 	for i in data.TRAITS:
@@ -35,14 +39,17 @@ func vote(vote):
 	current_survey.passed += 1
 	
 	match vote:
-		1:
+		0:
 			add_vote(1, question)
-		2:
+		1:
 			add_vote(-1, question)
-		3:
+		2:
 			add_vote(0.5, question)
-		4:
+		3:
 			add_vote(-0.5, question)
+		4:
+			if current_survey.do_not_know < current_survey.max_do_not_know:
+				current_survey.do_not_know += 1
 	
 	if current_survey.passed == len(data.QUESTIONS):
 		emit_signal("finished", summarize())

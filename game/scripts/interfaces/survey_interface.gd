@@ -19,12 +19,16 @@ func _ready():
 func update_data():
 	var question = Survey.get_next_question()
 	question_label.text = question.question
+	
 	tween.interpolate_property(progress_bar, "value",
 			progress_bar.value, Survey.current_survey.passed, 0.25,
 			Tween.TRANS_QUART, Tween.EASE_OUT)
 	tween.start()
-
+	
 	progress_bar.value = Survey.current_survey.passed
+	
+	do_not_know_button.disabled =  Survey.current_survey.do_not_know == Survey.current_survey.max_do_not_know
+	do_not_know_label.text = str(Survey.current_survey.do_not_know) + "/" + str(Survey.current_survey.max_do_not_know)
 
 
 func _on_restart():
