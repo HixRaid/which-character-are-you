@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/radio_checked.png-a2fb13a8ab13d97289a86814e080fbf5.stex"
+path="res://.import/restart.png-eabdb5fb72b74fbf3c940a1a02efaac0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/images/ui/radio_checked.png"
-dest_files=[ "res://.import/radio_checked.png-a2fb13a8ab13d97289a86814e080fbf5.stex" ]
+source_file="res://game/images/ui/restart.png"
+dest_files=[ "res://.import/restart.png-eabdb5fb72b74fbf3c940a1a02efaac0.stex" ]
 
 [params]
 

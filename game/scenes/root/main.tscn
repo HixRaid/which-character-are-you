@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -11,6 +11,12 @@
 [ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=9]
 [ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=10]
 [ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=11]
+[ext_resource path="res://game/images/ui/play.png" type="Texture" id=12]
+[ext_resource path="res://game/images/ui/settings.png" type="Texture" id=13]
+[ext_resource path="res://game/images/ui/more.png" type="Texture" id=14]
+[ext_resource path="res://game/images/ui/exit.png" type="Texture" id=15]
+[ext_resource path="res://game/images/ui/back.png" type="Texture" id=16]
+[ext_resource path="res://game/images/ui/restart.png" type="Texture" id=17]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -131,19 +137,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -216.0
-margin_right = 216.0
+margin_left = -176.0
+margin_right = 176.0
 margin_bottom = 208.0
 
 [node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -200.0
-margin_top = -88.0
-margin_right = -8.0
-margin_bottom = 40.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 192.0
+margin_bottom = 144.0
 
 [node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel"]
 anchor_right = 1.0
@@ -154,53 +156,75 @@ margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Play"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.0
+margin_top = -24.0
+margin_right = 24.0
+margin_bottom = 24.0
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 1
 
 [node name="DecorativePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -120.0
+margin_left = -96.0
 margin_top = 16.0
 margin_bottom = 32.0
 
 [node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 8.0
-margin_top = -88.0
-margin_right = 200.0
-margin_bottom = -8.0
+margin_left = 208.0
+margin_top = 16.0
+margin_right = 336.0
+margin_bottom = 96.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Settings"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )
+expand = true
+stretch_mode = 4
 
 [node name="AboutButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 168.0
-margin_bottom = 88.0
+margin_left = 208.0
+margin_top = 112.0
+margin_right = 288.0
+margin_bottom = 192.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "About"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 4
 
 [node name="QuitButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -128.0
+margin_left = -80.0
 margin_top = -80.0
 margin_right = -16.0
 margin_bottom = -16.0
-text = "Quit"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 4
 
 [node name="Survey" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
@@ -225,18 +249,24 @@ value = 50.0
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 margin_left = 16.0
 margin_top = 72.0
-margin_right = 208.0
+margin_right = 136.0
 margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Back"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 4
 
 [node name="QuestionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 224.0
+margin_left = 152.0
 margin_top = 72.0
-margin_right = -224.0
+margin_right = -152.0
 margin_bottom = -320.0
 custom_fonts/font = ExtResource( 5 )
 text = "How are you?"
@@ -247,13 +277,19 @@ autowrap = true
 [node name="RestartButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -208.0
+margin_left = -136.0
 margin_top = 72.0
 margin_right = -16.0
 margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Restart"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 17 )
+expand = true
+stretch_mode = 4
 
 [node name="Answers" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_left = 0.5
@@ -443,11 +479,17 @@ mouse_filter = 2
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/About/Panel"]
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 208.0
+margin_right = 136.0
 margin_bottom = 96.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Back"
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/About/Panel/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 4
 
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
@@ -463,6 +505,21 @@ visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 136.0
+margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+expand = true
+stretch_mode = 4
 
 [node name="ScalePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
 anchor_left = 0.5
@@ -497,15 +554,6 @@ margin_bottom = -16.0
 text = "Scale"
 valign = 1
 
-[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 208.0
-margin_bottom = 96.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Back"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
 anims/RESET = SubResource( 1 )
 anims/play = SubResource( 2 )
@@ -523,5 +571,5 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/NoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_no"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
-[connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
