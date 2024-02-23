@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://game/images/ui/exit.png" type="Texture" id=15]
 [ext_resource path="res://game/images/ui/back.png" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/restart.png" type="Texture" id=17]
+[ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=18]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -283,13 +284,17 @@ margin_right = -16.0
 margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
+script = ExtResource( 18 )
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 60, 40 )
 texture = ExtResource( 17 )
 expand = true
 stretch_mode = 4
+
+[node name="Tween" type="Tween" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton"]
 
 [node name="Answers" type="Control" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_left = 0.5
@@ -564,6 +569,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_restart"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" method="_on_pressed"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyYesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_yes"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel/Button" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_do_not_know"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyNoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_no"]
