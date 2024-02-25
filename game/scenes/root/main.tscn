@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
@@ -19,6 +19,10 @@
 [ext_resource path="res://game/images/ui/restart.png" type="Texture" id=17]
 [ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=18]
 [ext_resource path="res://game/images/ui/menu.png" type="Texture" id=19]
+[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=20]
+[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=21]
+[ext_resource path="res://game/resources/theme/styles/red_normal_style.tres" type="StyleBox" id=22]
+[ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=23]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -316,6 +320,11 @@ margin_top = 32.0
 margin_right = -8.0
 margin_bottom = 144.0
 focus_mode = 0
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 21 )
+custom_styles/focus = ExtResource( 20 )
+custom_styles/disabled = ExtResource( 21 )
+custom_styles/normal = ExtResource( 20 )
 enabled_focus_mode = 0
 text = "More likely yes"
 
@@ -373,6 +382,11 @@ margin_top = 32.0
 margin_right = 296.0
 margin_bottom = 144.0
 focus_mode = 0
+custom_styles/hover = ExtResource( 22 )
+custom_styles/pressed = ExtResource( 23 )
+custom_styles/focus = ExtResource( 22 )
+custom_styles/disabled = ExtResource( 23 )
+custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
 text = "More likely no"
 
@@ -386,6 +400,11 @@ margin_top = -96.0
 margin_right = -160.0
 margin_bottom = 16.0
 focus_mode = 0
+custom_styles/hover = ExtResource( 20 )
+custom_styles/pressed = ExtResource( 21 )
+custom_styles/focus = ExtResource( 20 )
+custom_styles/disabled = ExtResource( 21 )
+custom_styles/normal = ExtResource( 20 )
 enabled_focus_mode = 0
 text = "Yes"
 
@@ -399,6 +418,11 @@ margin_top = -96.0
 margin_right = 448.0
 margin_bottom = 16.0
 focus_mode = 0
+custom_styles/hover = ExtResource( 22 )
+custom_styles/pressed = ExtResource( 23 )
+custom_styles/focus = ExtResource( 22 )
+custom_styles/disabled = ExtResource( 23 )
+custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
 text = "No"
 
