@@ -527,6 +527,17 @@ texture = ExtResource( 16 )
 expand = true
 stretch_mode = 4
 
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/About/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 152.0
+margin_top = 16.0
+margin_right = -160.0
+margin_bottom = -16.0
+text = "This is a fun game that will help you find out what kind of character you would be in famous movies, TV shows or books. You will answer various questions about your preferences, character and ideas about the world. The game will then compare your answers with information about various characters and determine which of them you are most similar to."
+valign = 1
+autowrap = true
+
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
