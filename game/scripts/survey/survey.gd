@@ -28,7 +28,6 @@ func start():
 	
 	for i in data.TRAITS:
 		current_survey.traits.append({
-			"name": i,
 			"value": 0,
 			"count": 0,
 		})
