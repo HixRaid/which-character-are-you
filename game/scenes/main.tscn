@@ -1,26 +1,26 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=1]
-[ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=2]
-[ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=3]
-[ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=4]
-[ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=5]
-[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=6]
-[ext_resource path="res://game/images/icon.png" type="Texture" id=7]
-[ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=8]
-[ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=9]
-[ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=10]
-[ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=11]
-[ext_resource path="res://game/images/ui/play.png" type="Texture" id=12]
-[ext_resource path="res://game/images/ui/settings.png" type="Texture" id=13]
+[ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=3]
+[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=4]
+[ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=6]
+[ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=7]
+[ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=8]
+[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=9]
+[ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=10]
+[ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=11]
+[ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=12]
+[ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=13]
 [ext_resource path="res://game/images/ui/more.png" type="Texture" id=14]
-[ext_resource path="res://game/images/ui/exit.png" type="Texture" id=15]
-[ext_resource path="res://game/images/ui/back.png" type="Texture" id=16]
-[ext_resource path="res://game/images/ui/restart.png" type="Texture" id=17]
-[ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=18]
-[ext_resource path="res://game/images/ui/menu.png" type="Texture" id=19]
-[ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=20]
-[ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=21]
+[ext_resource path="res://game/images/icon.png" type="Texture" id=15]
+[ext_resource path="res://game/images/ui/play.png" type="Texture" id=16]
+[ext_resource path="res://game/images/ui/settings.png" type="Texture" id=17]
+[ext_resource path="res://game/images/ui/menu.png" type="Texture" id=18]
+[ext_resource path="res://game/images/ui/restart.png" type="Texture" id=19]
+[ext_resource path="res://game/images/ui/back.png" type="Texture" id=20]
+[ext_resource path="res://game/images/ui/exit.png" type="Texture" id=21]
 [ext_resource path="res://game/resources/theme/styles/red_normal_style.tres" type="StyleBox" id=22]
 [ext_resource path="res://game/resources/theme/styles/red_pressed_style.tres" type="StyleBox" id=23]
 
@@ -101,21 +101,21 @@ tracks/2/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-theme = ExtResource( 3 )
+theme = ExtResource( 12 )
 
 [node name="InterfaceSwitch" type="Control" parent="Canvas/UI"]
 unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 1 )
+script = ExtResource( 8 )
 open_interface = "Menu"
 
 [node name="Menu" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 6 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -133,7 +133,7 @@ anchor_bottom = 0.5
 margin_left = -576.0
 margin_top = -160.0
 margin_right = 576.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = ExtResource( 5 )
 text = "Which Character Are You"
 align = 1
 valign = 1
@@ -172,7 +172,7 @@ margin_left = -24.0
 margin_top = -24.0
 margin_right = 24.0
 margin_bottom = 24.0
-texture = ExtResource( 12 )
+texture = ExtResource( 16 )
 expand = true
 stretch_mode = 1
 
@@ -196,7 +196,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 13 )
+texture = ExtResource( 17 )
 expand = true
 stretch_mode = 4
 
@@ -228,7 +228,7 @@ margin_bottom = -16.0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 15 )
+texture = ExtResource( 21 )
 expand = true
 stretch_mode = 4
 
@@ -236,7 +236,7 @@ stretch_mode = 4
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -263,7 +263,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 16 )
+texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
 
@@ -274,7 +274,7 @@ margin_left = 152.0
 margin_top = 72.0
 margin_right = -152.0
 margin_bottom = -320.0
-custom_fonts/font = ExtResource( 5 )
+custom_fonts/font = ExtResource( 2 )
 text = "How are you?"
 align = 1
 valign = 1
@@ -289,13 +289,13 @@ margin_right = -16.0
 margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
-script = ExtResource( 18 )
+script = ExtResource( 13 )
 
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 60, 40 )
-texture = ExtResource( 17 )
+texture = ExtResource( 19 )
 expand = true
 stretch_mode = 4
 
@@ -320,11 +320,11 @@ margin_top = 32.0
 margin_right = -8.0
 margin_bottom = 144.0
 focus_mode = 0
-custom_styles/hover = ExtResource( 20 )
-custom_styles/pressed = ExtResource( 21 )
-custom_styles/focus = ExtResource( 20 )
-custom_styles/disabled = ExtResource( 21 )
-custom_styles/normal = ExtResource( 20 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
 text = "More likely yes"
 
@@ -400,11 +400,11 @@ margin_top = -96.0
 margin_right = -160.0
 margin_bottom = 16.0
 focus_mode = 0
-custom_styles/hover = ExtResource( 20 )
-custom_styles/pressed = ExtResource( 21 )
-custom_styles/focus = ExtResource( 20 )
-custom_styles/disabled = ExtResource( 21 )
-custom_styles/normal = ExtResource( 20 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/focus = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 4 )
+custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
 text = "Yes"
 
@@ -433,7 +433,7 @@ unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 10 )
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -455,7 +455,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 4
 
@@ -468,7 +468,7 @@ margin_left = -128.0
 margin_top = -264.0
 margin_right = 128.0
 margin_bottom = -8.0
-texture = ExtResource( 7 )
+texture = ExtResource( 15 )
 expand = true
 stretch_mode = 6
 
@@ -492,7 +492,7 @@ margin_left = 64.0
 margin_top = 72.0
 margin_right = -64.0
 margin_bottom = -16.0
-custom_fonts/font = ExtResource( 8 )
+custom_fonts/font = ExtResource( 1 )
 text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, pariatur ex dignissimos eaque debitis qui ducimus repellat cumque natus nemo architecto expedita, praesentium assumenda quam iste at sint suscipit cupiditate harum inventore? Quisquam hic magnam animi dignissimos quasi perspiciatis quo amet, recusandae nemo distinctio error eveniet nisi expedita similique optio esse exercitationem, perferendis consequatur totam sapiente voluptatum praesentium velit. Animi obcaecati qui fugit harum repudiandae minus doloribus magni omnis, incidunt, amet voluptates pariatur tenetur autem repellat, sunt ducimus rerum provident cum!"
 align = 1
 autowrap = true
@@ -501,7 +501,7 @@ autowrap = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 2 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -523,7 +523,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/About/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 16 )
+texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
 
@@ -542,7 +542,7 @@ autowrap = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 11 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -564,7 +564,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 16 )
+texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
 
