@@ -146,12 +146,14 @@ anchor_bottom = 0.5
 margin_left = -176.0
 margin_right = 176.0
 margin_bottom = 208.0
+mouse_filter = 2
 
 [node name="PlayPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 192.0
 margin_bottom = 144.0
+mouse_filter = 2
 
 [node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel"]
 anchor_right = 1.0
@@ -172,6 +174,7 @@ margin_left = -24.0
 margin_top = -24.0
 margin_right = 24.0
 margin_bottom = 24.0
+mouse_filter = 2
 texture = ExtResource( 16 )
 expand = true
 stretch_mode = 1
@@ -184,6 +187,7 @@ anchor_bottom = 1.0
 margin_left = -96.0
 margin_top = 16.0
 margin_bottom = 32.0
+mouse_filter = 2
 
 [node name="SettingsButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 margin_left = 208.0
@@ -196,6 +200,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 17 )
 expand = true
 stretch_mode = 4
@@ -211,6 +216,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 stretch_mode = 4
@@ -228,6 +234,7 @@ margin_bottom = -16.0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 21 )
 expand = true
 stretch_mode = 4
@@ -250,6 +257,7 @@ mouse_filter = 2
 [node name="ProgressBar" type="ProgressBar" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 anchor_right = 1.0
 margin_bottom = 56.0
+mouse_filter = 2
 value = 50.0
 
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
@@ -263,6 +271,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
@@ -295,6 +304,7 @@ script = ExtResource( 13 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( 60, 40 )
+mouse_filter = 2
 texture = ExtResource( 19 )
 expand = true
 stretch_mode = 4
@@ -309,6 +319,7 @@ anchor_bottom = 1.0
 margin_left = -464.0
 margin_top = -320.0
 margin_right = 464.0
+mouse_filter = 2
 
 [node name="MoreLikelyYesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -337,12 +348,14 @@ margin_left = -144.0
 margin_top = -144.0
 margin_right = 144.0
 margin_bottom = 16.0
+mouse_filter = 2
 
 [node name="DecorativePanel1" type="Panel" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
 margin_left = -176.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = 32.0
+mouse_filter = 2
 
 [node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
 anchor_right = 1.0
@@ -359,6 +372,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = 176.0
 margin_bottom = 32.0
+mouse_filter = 2
 
 [node name="Button" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
 anchor_top = 1.0
@@ -455,6 +469,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 18 )
 expand = true
 stretch_mode = 4
@@ -468,6 +483,7 @@ margin_left = -128.0
 margin_top = -264.0
 margin_right = 128.0
 margin_bottom = -8.0
+mouse_filter = 2
 texture = ExtResource( 15 )
 expand = true
 stretch_mode = 6
@@ -523,6 +539,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/About/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
@@ -564,6 +581,7 @@ enabled_focus_mode = 0
 [node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_filter = 2
 texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
@@ -577,6 +595,7 @@ margin_left = -272.0
 margin_top = -48.0
 margin_right = 272.0
 margin_bottom = 48.0
+mouse_filter = 2
 
 [node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
 anchor_left = 0.5
