@@ -13,7 +13,7 @@
 [ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=11]
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=12]
 [ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=13]
-[ext_resource path="res://game/images/ui/more.png" type="Texture" id=14]
+[ext_resource path="res://game/images/ui/info.png" type="Texture" id=14]
 [ext_resource path="res://game/images/icon.png" type="Texture" id=15]
 [ext_resource path="res://game/images/ui/play.png" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/settings.png" type="Texture" id=17]
@@ -205,7 +205,7 @@ texture = ExtResource( 17 )
 expand = true
 stretch_mode = 4
 
-[node name="AboutButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
+[node name="InfoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu"]
 margin_left = 208.0
 margin_top = 112.0
 margin_right = 288.0
@@ -213,7 +213,7 @@ margin_bottom = 192.0
 focus_mode = 0
 enabled_focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/InfoButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -513,7 +513,7 @@ text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, pariatur 
 align = 1
 autowrap = true
 
-[node name="About" type="Control" parent="Canvas/UI/InterfaceSwitch"]
+[node name="Info" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -522,13 +522,13 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/About"]
+[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Info"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 
-[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/About/Panel"]
+[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 136.0
@@ -536,7 +536,7 @@ margin_bottom = 96.0
 focus_mode = 0
 enabled_focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/About/Panel/BackButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -544,7 +544,7 @@ texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
 
-[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/About/Panel"]
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 152.0
@@ -626,7 +626,7 @@ anims/play = SubResource( 2 )
 
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/Button" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/AboutButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "About" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/InfoButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_restart"]
@@ -637,6 +637,6 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/YesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_yes"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/NoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_no"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/About/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
