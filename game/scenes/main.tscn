@@ -586,22 +586,65 @@ texture = ExtResource( 20 )
 expand = true
 stretch_mode = 4
 
+[node name="LanguagePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -104.0
+margin_right = 200.0
+margin_bottom = -8.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -192.0
+margin_bottom = -16.0
+text = "Language"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -176.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "EN"
+items = [ "RU", null, false, 0, null, "EN", null, false, 1, null, "TR", null, false, 2, null ]
+selected = 1
+
 [node name="ScalePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -272.0
-margin_top = -48.0
-margin_right = 272.0
-margin_bottom = 48.0
+margin_left = -200.0
+margin_top = 8.0
+margin_right = 200.0
+margin_bottom = 104.0
 mouse_filter = 2
 
-[node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
-anchor_left = 0.5
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
+margin_top = 16.0
+margin_right = -272.0
+margin_bottom = -16.0
+text = "Scale"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
@@ -609,16 +652,6 @@ focus_mode = 0
 text = "Tablet"
 items = [ "Mobile", null, false, 0, null, "Tablet", null, false, 1, null, "Desktop", null, false, 2, null ]
 selected = 1
-
-[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = 16.0
-margin_top = 16.0
-margin_right = -16.0
-margin_bottom = -16.0
-text = "Scale"
-valign = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
 anims/RESET = SubResource( 1 )
