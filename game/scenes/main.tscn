@@ -134,7 +134,7 @@ margin_left = -576.0
 margin_top = -160.0
 margin_right = 576.0
 custom_fonts/font = ExtResource( 5 )
-text = "Which Character Are You"
+text = "game_name"
 align = 1
 valign = 1
 
@@ -258,7 +258,6 @@ mouse_filter = 2
 anchor_right = 1.0
 margin_bottom = 56.0
 mouse_filter = 2
-value = 50.0
 
 [node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 margin_left = 16.0
@@ -284,7 +283,6 @@ margin_top = 72.0
 margin_right = -152.0
 margin_bottom = -320.0
 custom_fonts/font = ExtResource( 2 )
-text = "How are you?"
 align = 1
 valign = 1
 autowrap = true
@@ -326,7 +324,7 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -296.0
+margin_left = -384.0
 margin_top = 32.0
 margin_right = -8.0
 margin_bottom = 144.0
@@ -337,7 +335,7 @@ custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
-text = "More likely yes"
+text = "more_likely_yes"
 
 [node name="DoNotKnowPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -361,7 +359,7 @@ mouse_filter = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -96.0
-text = "0/50"
+text = "0/0"
 align = 1
 valign = 1
 
@@ -384,7 +382,7 @@ margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "Don't know"
+text = "do_not_know"
 
 [node name="MoreLikelyNoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -393,7 +391,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 8.0
 margin_top = 32.0
-margin_right = 296.0
+margin_right = 384.0
 margin_bottom = 144.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 22 )
@@ -402,7 +400,7 @@ custom_styles/focus = ExtResource( 22 )
 custom_styles/disabled = ExtResource( 23 )
 custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
-text = "More likely no"
+text = "more_likely_no"
 
 [node name="YesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -420,7 +418,7 @@ custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
-text = "Yes"
+text = "yes"
 
 [node name="NoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -438,7 +436,7 @@ custom_styles/focus = ExtResource( 22 )
 custom_styles/disabled = ExtResource( 23 )
 custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
-text = "No"
+text = "no"
 
 [node name="Tween" type="Tween" parent="Canvas/UI/InterfaceSwitch/Survey"]
 
@@ -551,7 +549,7 @@ margin_left = 152.0
 margin_top = 16.0
 margin_right = -160.0
 margin_bottom = -16.0
-text = "This is a fun game that will help you find out what kind of character you would be in famous movies, TV shows or books. You will answer various questions about your preferences, character and ideas about the world. The game will then compare your answers with information about various characters and determine which of them you are most similar to."
+text = "info"
 valign = 1
 autowrap = true
 
@@ -591,9 +589,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
+margin_left = -224.0
 margin_top = -104.0
-margin_right = 200.0
+margin_right = 224.0
 margin_bottom = -8.0
 mouse_filter = 2
 
@@ -604,7 +602,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = -192.0
 margin_bottom = -16.0
-text = "Language"
+text = "language"
 valign = 1
 
 [node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel"]
@@ -616,17 +614,17 @@ margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 text = "EN"
-items = [ "RU", null, false, 0, null, "EN", null, false, 1, null, "TR", null, false, 2, null ]
-selected = 1
+items = [ "EN", null, false, 0, null, "RU", null, false, 1, null, "TR", null, false, 2, null ]
+selected = 0
 
 [node name="ScalePanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Settings/Panel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -200.0
+margin_left = -224.0
 margin_top = 8.0
-margin_right = 200.0
+margin_right = 224.0
 margin_bottom = 104.0
 mouse_filter = 2
 
@@ -635,22 +633,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = 16.0
-margin_right = -272.0
+margin_right = -288.0
 margin_bottom = -16.0
-text = "Scale"
+text = "scale"
 valign = 1
 
 [node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -256.0
+margin_left = -272.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
-text = "Tablet"
-items = [ "Mobile", null, false, 0, null, "Tablet", null, false, 1, null, "Desktop", null, false, 2, null ]
+text = "tablet"
+items = [ "mobile", null, false, 0, null, "tablet", null, false, 1, null, "pc", null, false, 2, null ]
 selected = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
@@ -672,4 +670,5 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_language_selected"]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
