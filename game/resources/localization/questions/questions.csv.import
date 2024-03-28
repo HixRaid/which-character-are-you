@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://game/resources/localization/questions/questions.en.translation", "res://game/resources/localization/questions/questions.ru.translation", "res://game/resources/localization/questions/questions.tr.translation" ]
+
+source_file="res://game/resources/localization/questions/questions.csv"
+dest_files=[ "res://game/resources/localization/questions/questions.en.translation", "res://game/resources/localization/questions/questions.ru.translation", "res://game/resources/localization/questions/questions.tr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

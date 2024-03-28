@@ -19,7 +19,7 @@ func _ready():
 
 func update_data():
 	var question = Survey.get_next_question()
-	question_label.text = question.question
+	question_label.text = question.key
 	
 	tween.interpolate_property(progress_bar, "value",
 			progress_bar.value, Survey.current_survey.passed, 0.25,

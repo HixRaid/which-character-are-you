@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://game/resources/localization/characters/characters.en.translation", "res://game/resources/localization/characters/characters.ru.translation", "res://game/resources/localization/characters/characters.tr.translation" ]
+
+source_file="res://game/resources/localization/characters/characters.csv"
+dest_files=[ "res://game/resources/localization/characters/characters.en.translation", "res://game/resources/localization/characters/characters.ru.translation", "res://game/resources/localization/characters/characters.tr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

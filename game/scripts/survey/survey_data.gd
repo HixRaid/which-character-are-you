@@ -6,20 +6,20 @@ const TRAITS = [
 
 const CHARACTERS = [
 	{
-		"name": "Character 1",
-		"description": "Description 1",
+		"name_key": "CHARACTER_1",
+		"description_key": "DESCRIPTION_CHARACTER_1",
 		"image": "character_1.png",
 		"traits": [0.5, 0.9]
 	},
 	{
-		"name": "Character 2",
-		"description": "Description 2",
+		"name_ley": "CHARACTER_2",
+		"description_key": "DESCRIPTION_CHARACTER_2",
 		"image": "character_2.png",
 		"traits": [0.1, 0.2]
 	},
 	{
-		"name": "Character 3",
-		"description": "Description 3",
+		"name_key": "CHARACTER_3",
+		"description_key": "DESCRIPTION_CHARACTER_3",
 		"image": "character_3.png",
 		"traits": [0.6, 0.5]
 	}
@@ -27,32 +27,32 @@ const CHARACTERS = [
 
 const QUESTIONS = [
 	{
-		"question": "Question 1",
+		"key": "QUESTION_1",
 		"positive": false,
 		"trait": 0
 	},
 	{
-		"question": "Question 2",
+		"key": "QUESTION_2",
 		"positive": true,
 		"trait": 1
 	},
 	{
-		"question": "Question 3",
+		"key": "QUESTION_3",
 		"positive": true,
 		"trait": 0
 	},
 	{
-		"question": "Question 4",
+		"key": "QUESTION_4",
 		"positive": false,
 		"trait": 1
 	},
 	{
-		"question": "Question 5",
+		"key": "QUESTION_5",
 		"positive": true,
 		"trait": 0
 	},
 	{
-		"question": "Question 6",
+		"key": "QUESTION_6",
 		"positive": true,
 		"trait": 1
 	}

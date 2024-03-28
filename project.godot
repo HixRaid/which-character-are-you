@@ -42,7 +42,7 @@ pointing/emulate_touch_from_mouse=true
 
 [locale]
 
-translations=PoolStringArray( "res://game/resources/translation/translation.en.translation", "res://game/resources/translation/translation.ru.translation", "res://game/resources/translation/translation.tr.translation" )
+translations=PoolStringArray( "res://game/resources/localization/ui/ui.en.translation", "res://game/resources/localization/ui/ui.ru.translation", "res://game/resources/localization/ui/ui.tr.translation", "res://game/resources/localization/questions/questions.en.translation", "res://game/resources/localization/questions/questions.ru.translation", "res://game/resources/localization/questions/questions.tr.translation", "res://game/resources/localization/characters/characters.en.translation", "res://game/resources/localization/characters/characters.ru.translation", "res://game/resources/localization/characters/characters.tr.translation" )
 locale_filter=[ 0, [ "en", "ru", "tr" ] ]
 
 [physics]
