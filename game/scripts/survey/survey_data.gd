@@ -12,7 +12,7 @@ const CHARACTERS = [
 		"traits": [0.5, 0.9]
 	},
 	{
-		"name_ley": "CHARACTER_2",
+		"name_key": "CHARACTER_2",
 		"description_key": "DESCRIPTION_CHARACTER_2",
 		"image": "character_2.png",
 		"traits": [0.1, 0.2]
