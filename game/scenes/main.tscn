@@ -134,7 +134,7 @@ margin_left = -576.0
 margin_top = -160.0
 margin_right = 576.0
 custom_fonts/font = ExtResource( 5 )
-text = "game_name"
+text = "GAME_NAME"
 align = 1
 valign = 1
 
@@ -335,7 +335,7 @@ custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
-text = "more_likely_yes"
+text = "MORE_LIKELY_YES"
 
 [node name="DoNotKnowPanel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -382,7 +382,7 @@ margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
 enabled_focus_mode = 0
-text = "do_not_know"
+text = "DO_NOT_KNOW"
 
 [node name="MoreLikelyNoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -400,7 +400,7 @@ custom_styles/focus = ExtResource( 22 )
 custom_styles/disabled = ExtResource( 23 )
 custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
-text = "more_likely_no"
+text = "MORE_LIKELY_NO"
 
 [node name="YesButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -418,7 +418,7 @@ custom_styles/focus = ExtResource( 3 )
 custom_styles/disabled = ExtResource( 4 )
 custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
-text = "yes"
+text = "YES"
 
 [node name="NoButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers"]
 anchor_left = 0.5
@@ -436,7 +436,7 @@ custom_styles/focus = ExtResource( 22 )
 custom_styles/disabled = ExtResource( 23 )
 custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
-text = "no"
+text = "NO"
 
 [node name="Tween" type="Tween" parent="Canvas/UI/InterfaceSwitch/Survey"]
 
@@ -549,7 +549,7 @@ margin_left = 152.0
 margin_top = 16.0
 margin_right = -160.0
 margin_bottom = -16.0
-text = "info"
+text = "INFO"
 valign = 1
 autowrap = true
 
@@ -602,7 +602,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = -192.0
 margin_bottom = -16.0
-text = "language"
+text = "LANGUAGE"
 valign = 1
 
 [node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel"]
@@ -635,7 +635,7 @@ margin_left = 16.0
 margin_top = 16.0
 margin_right = -288.0
 margin_bottom = -16.0
-text = "scale"
+text = "SCALE"
 valign = 1
 
 [node name="OptionButton" type="OptionButton" parent="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel"]
@@ -647,8 +647,8 @@ margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
-text = "tablet"
-items = [ "mobile", null, false, 0, null, "tablet", null, false, 1, null, "pc", null, false, 2, null ]
+text = "TABLET"
+items = [ "MOBILE", null, false, 0, null, "TABLET", null, false, 1, null, "PC", null, false, 2, null ]
 selected = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
