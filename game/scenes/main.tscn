@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=12]
 [ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=13]
 [ext_resource path="res://game/images/ui/info.png" type="Texture" id=14]
-[ext_resource path="res://game/images/icon.png" type="Texture" id=15]
 [ext_resource path="res://game/images/ui/play.png" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/settings.png" type="Texture" id=17]
 [ext_resource path="res://game/images/ui/menu.png" type="Texture" id=18]
@@ -482,7 +481,6 @@ margin_top = -264.0
 margin_right = 128.0
 margin_bottom = -8.0
 mouse_filter = 2
-texture = ExtResource( 15 )
 expand = true
 stretch_mode = 6
 
@@ -494,7 +492,6 @@ margin_left = 64.0
 margin_top = 8.0
 margin_right = -64.0
 margin_bottom = 56.0
-text = "Character name"
 align = 1
 valign = 1
 
@@ -507,7 +504,6 @@ margin_top = 72.0
 margin_right = -64.0
 margin_bottom = -16.0
 custom_fonts/font = ExtResource( 1 )
-text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, pariatur ex dignissimos eaque debitis qui ducimus repellat cumque natus nemo architecto expedita, praesentium assumenda quam iste at sint suscipit cupiditate harum inventore? Quisquam hic magnam animi dignissimos quasi perspiciatis quo amet, recusandae nemo distinctio error eveniet nisi expedita similique optio esse exercitationem, perferendis consequatur totam sapiente voluptatum praesentium velit. Animi obcaecati qui fugit harum repudiandae minus doloribus magni omnis, incidunt, amet voluptates pariatur tenetur autem repellat, sunt ducimus rerum provident cum!"
 align = 1
 autowrap = true
 
