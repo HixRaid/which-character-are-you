@@ -258,7 +258,7 @@ anchor_right = 1.0
 margin_bottom = 56.0
 mouse_filter = 2
 
-[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
+[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Survey/Panel"]
 margin_left = 16.0
 margin_top = 72.0
 margin_right = 136.0
@@ -266,11 +266,11 @@ margin_bottom = 152.0
 focus_mode = 0
 enabled_focus_mode = 0
 
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton"]
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Survey/Panel/MenuButton"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-texture = ExtResource( 20 )
+texture = ExtResource( 18 )
 expand = true
 stretch_mode = 4
 
@@ -655,7 +655,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/MainMenu/InfoButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Menu/Panel/QuitButton" to="Canvas/UI/InterfaceSwitch/Menu" method="quit"]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_restart"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" to="Canvas/UI/InterfaceSwitch/Survey/Panel/RestartButton" method="_on_pressed"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyYesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_yes"]
