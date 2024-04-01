@@ -48,5 +48,4 @@ func set_visible_interface(name):
 	else:
 		return
 	
-	rect_pivot_offset = get_tree().root.get_visible_rect().size / 2
 	animation_player.play("play")
