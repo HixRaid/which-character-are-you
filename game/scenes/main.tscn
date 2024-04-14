@@ -439,116 +439,6 @@ text = "NO"
 
 [node name="Tween" type="Tween" parent="Canvas/UI/InterfaceSwitch/Survey"]
 
-[node name="Result" type="Control" parent="Canvas/UI/InterfaceSwitch"]
-unique_name_in_owner = true
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-script = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Result"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-
-[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 136.0
-margin_bottom = 96.0
-focus_mode = 0
-enabled_focus_mode = 0
-
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource( 18 )
-expand = true
-stretch_mode = 4
-
-[node name="CharacterImage" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -128.0
-margin_top = -264.0
-margin_right = 128.0
-margin_bottom = -8.0
-mouse_filter = 2
-expand = true
-stretch_mode = 6
-
-[node name="NameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_left = 64.0
-margin_top = 8.0
-margin_right = -64.0
-margin_bottom = 56.0
-align = 1
-valign = 1
-
-[node name="DescriptionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 64.0
-margin_top = 72.0
-margin_right = -64.0
-margin_bottom = -16.0
-custom_fonts/font = ExtResource( 1 )
-align = 1
-autowrap = true
-
-[node name="Info" type="Control" parent="Canvas/UI/InterfaceSwitch"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Info"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-
-[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 136.0
-margin_bottom = 96.0
-focus_mode = 0
-enabled_focus_mode = 0
-
-[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 2
-texture = ExtResource( 20 )
-expand = true
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 152.0
-margin_top = 16.0
-margin_right = -160.0
-margin_bottom = -16.0
-text = "INFO"
-valign = 1
-autowrap = true
-
 [node name="Settings" type="Control" parent="Canvas/UI/InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -647,6 +537,126 @@ text = "TABLET"
 items = [ "MOBILE", null, false, 0, null, "TABLET", null, false, 1, null, "PC", null, false, 2, null ]
 selected = 1
 
+[node name="Info" type="Control" parent="Canvas/UI/InterfaceSwitch"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Info"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="BackButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 136.0
+margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 20 )
+expand = true
+stretch_mode = 4
+
+[node name="Panel" type="Panel" parent="Canvas/UI/InterfaceSwitch/Info/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -392.0
+margin_top = -176.0
+margin_right = 392.0
+margin_bottom = 240.0
+
+[node name="Label" type="Label" parent="Canvas/UI/InterfaceSwitch/Info/Panel/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "INFO"
+valign = 1
+autowrap = true
+
+[node name="Result" type="Control" parent="Canvas/UI/InterfaceSwitch"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Control" parent="Canvas/UI/InterfaceSwitch/Result"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="MenuButton" type="Button" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 136.0
+margin_bottom = 96.0
+focus_mode = 0
+enabled_focus_mode = 0
+
+[node name="Icon" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 18 )
+expand = true
+stretch_mode = 4
+
+[node name="CharacterImage" type="TextureRect" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -264.0
+margin_right = 128.0
+margin_bottom = -8.0
+mouse_filter = 2
+expand = true
+stretch_mode = 6
+
+[node name="NameLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 64.0
+margin_top = 8.0
+margin_right = -64.0
+margin_bottom = 56.0
+align = 1
+valign = 1
+
+[node name="DescriptionLabel" type="Label" parent="Canvas/UI/InterfaceSwitch/Result/Panel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 72.0
+margin_right = -64.0
+margin_bottom = -16.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+autowrap = true
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Canvas/UI"]
 anims/RESET = SubResource( 1 )
 anims/play = SubResource( 2 )
@@ -663,8 +673,8 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/MoreLikelyNoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_more_likely_no"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/YesButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_yes"]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Survey/Panel/Answers/NoButton" to="Canvas/UI/InterfaceSwitch/Survey" method="_on_no"]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
-[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Settings/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/LanguagePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_language_selected"]
 [connection signal="item_selected" from="Canvas/UI/InterfaceSwitch/Settings/Panel/ScalePanel/OptionButton" to="Canvas/UI/InterfaceSwitch/Settings" method="_on_scale_selected"]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Info/Panel/BackButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
+[connection signal="pressed" from="Canvas/UI/InterfaceSwitch/Result/Panel/MenuButton" to="Canvas/UI/InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]
