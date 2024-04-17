@@ -1,9 +1,17 @@
 extends "res://game/scripts/interfaces/interface.gd"
 
 onready var language_option_button = $Panel/LanguagePanel/OptionButton
+onready var scale_option_button = $Panel/ScalePanel/OptionButton
 
 
 func _ready():
+	if OS.has_feature("mobile") or OS.has_feature("web") and JavaScript.eval("/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)", true):
+		_on_scale_selected(0)
+		scale_option_button.selected = 0
+	elif OS.has_feature("pc"):
+		_on_scale_selected(2)
+		scale_option_button.selected = 2
+	
 	match OS.get_locale_language():
 		"en":
 			language_option_button.selected = 0
