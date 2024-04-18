@@ -48,4 +48,6 @@ func set_visible_interface(name):
 	else:
 		return
 	
+	rect_pivot_offset = rect_size / 2
+	
 	animation_player.play("play")

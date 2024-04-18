@@ -38,7 +38,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("InterfaceSwitch:rect_position")
+tracks/1/path = NodePath("InterfaceSwitch:rect_scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -47,29 +47,27 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=2]
 resource_name = "play"
 length = 0.3
-tracks/0/type = "method"
-tracks/0/path = NodePath("InterfaceSwitch")
-tracks/0/interp = 1
+tracks/0/type = "value"
+tracks/0/path = NodePath("InterfaceSwitch:modulate")
+tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.15 ),
-"transitions": PoolRealArray( 1 ),
-"values": [ {
-"args": [  ],
-"method": "_on_set_visible"
-} ]
+"times": PoolRealArray( 0, 0.15, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("InterfaceSwitch:modulate")
-tracks/1/interp = 1
+tracks/1/path = NodePath("InterfaceSwitch:rect_scale")
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -77,19 +75,21 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.15, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
 }
-tracks/2/type = "value"
-tracks/2/path = NodePath("InterfaceSwitch:rect_position")
+tracks/2/type = "method"
+tracks/2/path = NodePath("InterfaceSwitch")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.15, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -100 ), Vector2( 0, 0 ) ]
+"times": PoolRealArray( 0.15 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_on_set_visible"
+} ]
 }
 
 [node name="Main" type="Node"]
@@ -106,6 +106,7 @@ theme = ExtResource( 12 )
 unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 640, 360 )
 mouse_filter = 2
 script = ExtResource( 8 )
 open_interface = "Menu"
