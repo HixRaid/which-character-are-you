@@ -2,8 +2,8 @@ extends "res://game/scripts/interfaces/interface.gd"
 
 onready var progress_bar = $Panel/ProgressBar
 onready var question_label = $Panel/QuestionLabel
-onready var do_not_know_label = $Panel/Answers/DoNotKnowPanel/Label
-onready var do_not_know_button = $Panel/Answers/DoNotKnowPanel/Button
+onready var do_not_know_counter_label = $Panel/Answers/DoNotKnowPanel/CounterLabel
+onready var do_not_know_button = $Panel/Answers/DoNotKnowPanel/DoNotKnowButton
 onready var restart_button = $Panel/RestartButton
 onready var interface_switch = $"%InterfaceSwitch"
 onready var result_interface = $"%Result"
@@ -31,7 +31,7 @@ func update_data():
 	restart_button.disabled = Survey.current_survey.passed == 0
 	
 	do_not_know_button.disabled =  Survey.current_survey.do_not_know == Survey.current_survey.max_do_not_know
-	do_not_know_label.text = str(Survey.current_survey.do_not_know) + "/" + str(Survey.current_survey.max_do_not_know)
+	do_not_know_counter_label.text = str(Survey.current_survey.do_not_know) + "/" + str(Survey.current_survey.max_do_not_know)
 
 func _on_restart():
 	Survey.start()

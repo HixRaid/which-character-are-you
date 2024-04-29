@@ -1,7 +1,7 @@
 extends "res://game/scripts/interfaces/interface.gd"
 
-onready var language_option_button = $Panel/LanguagePanel/OptionButton
-onready var scale_option_button = $Panel/ScalePanel/OptionButton
+onready var language_option_button = $Panel/Wrapper/SettingsPanel/LanguagePanel/OptionButton
+onready var scale_option_button = $Panel/Wrapper/SettingsPanel/ScalePanel/OptionButton
 
 
 func _ready():
