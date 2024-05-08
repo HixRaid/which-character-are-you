@@ -9,9 +9,9 @@
 [ext_resource path="res://game/resources/theme/styles/bg_style.tres" type="StyleBox" id=7]
 [ext_resource path="res://game/resources/theme/styles/panel_popup_menu_style.tres" type="StyleBox" id=8]
 [ext_resource path="res://game/resources/theme/styles/hover_popup_menu_style.tres" type="StyleBox" id=9]
-[ext_resource path="res://game/images/ui/radio_unchecked.png" type="Texture" id=10]
-[ext_resource path="res://game/images/ui/radio_checked.png" type="Texture" id=11]
-[ext_resource path="res://game/images/ui/arrow_down.png" type="Texture" id=12]
+[ext_resource path="res://game/images/ui/arrow_down.tres" type="Texture" id=10]
+[ext_resource path="res://game/images/ui/radio_unchecked.tres" type="Texture" id=11]
+[ext_resource path="res://game/images/ui/radio_checked.tres" type="Texture" id=12]
 
 [resource]
 default_font = ExtResource( 1 )
@@ -33,7 +33,7 @@ Label/constants/line_spacing = 3
 Label/constants/shadow_as_outline = 0
 Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
-OptionButton/icons/arrow = ExtResource( 12 )
+OptionButton/icons/arrow = ExtResource( 10 )
 Panel/styles/panel = ExtResource( 5 )
 PopupMenu/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.8, 0.8, 0.8, 1 )
@@ -42,8 +42,8 @@ PopupMenu/colors/font_color_hover = Color( 0.8, 0.8, 0.8, 1 )
 PopupMenu/colors/font_color_separator = Color( 0.8, 0.8, 0.8, 1 )
 PopupMenu/constants/hseparation = 16
 PopupMenu/constants/vseparation = 16
-PopupMenu/icons/radio_checked = ExtResource( 11 )
-PopupMenu/icons/radio_unchecked = ExtResource( 10 )
+PopupMenu/icons/radio_checked = ExtResource( 12 )
+PopupMenu/icons/radio_unchecked = ExtResource( 11 )
 PopupMenu/styles/hover = ExtResource( 9 )
 PopupMenu/styles/panel = ExtResource( 8 )
 ProgressBar/colors/font_color = Color( 0.8, 0.8, 0.8, 1 )
