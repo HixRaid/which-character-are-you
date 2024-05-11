@@ -478,10 +478,10 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="BackButton" type="Button" parent="InterfaceSwitch/Settings/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 136.0
-margin_bottom = 96.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 152.0
+margin_bottom = 112.0
 focus_mode = 0
 enabled_focus_mode = 0
 
@@ -502,7 +502,7 @@ stretch_mode = 1
 [node name="Wrapper" type="Control" parent="InterfaceSwitch/Settings/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 96.0
+margin_top = 72.0
 mouse_filter = 2
 
 [node name="SettingsPanel" type="Control" parent="InterfaceSwitch/Settings/Panel/Wrapper"]
@@ -514,6 +514,7 @@ margin_left = -224.0
 margin_top = -108.0
 margin_right = 224.0
 margin_bottom = 108.0
+mouse_filter = 2
 
 [node name="LanguagePanel" type="Panel" parent="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel"]
 anchor_left = 0.5
@@ -597,10 +598,10 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="BackButton" type="Button" parent="InterfaceSwitch/Info/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 136.0
-margin_bottom = 96.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 152.0
+margin_bottom = 112.0
 focus_mode = 0
 enabled_focus_mode = 0
 
@@ -621,7 +622,7 @@ stretch_mode = 1
 [node name="Wrapper" type="Control" parent="InterfaceSwitch/Info/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 96.0
+margin_top = 72.0
 mouse_filter = 2
 
 [node name="InfoPanel" type="Panel" parent="InterfaceSwitch/Info/Panel/Wrapper"]
@@ -662,10 +663,10 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="MenuButton" type="Button" parent="InterfaceSwitch/Result/Panel"]
-margin_left = 16.0
-margin_top = 16.0
-margin_right = 136.0
-margin_bottom = 96.0
+margin_left = 32.0
+margin_top = 32.0
+margin_right = 152.0
+margin_bottom = 112.0
 focus_mode = 0
 enabled_focus_mode = 0
 
