@@ -296,7 +296,7 @@ anchor_bottom = 1.0
 margin_left = 168.0
 margin_top = 88.0
 margin_right = -168.0
-margin_bottom = -336.0
+margin_bottom = -304.0
 custom_fonts/font = ExtResource( 2 )
 align = 1
 valign = 1
@@ -330,18 +330,18 @@ stretch_mode = 1
 
 [node name="Tween" type="Tween" parent="InterfaceSwitch/Survey/Panel/RestartButton"]
 
-[node name="Answers" type="Control" parent="InterfaceSwitch/Survey/Panel"]
+[node name="AnswersPanel" type="Control" parent="InterfaceSwitch/Survey/Panel"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -448.0
-margin_top = -320.0
-margin_right = 448.0
+margin_left = -384.0
+margin_top = -288.0
+margin_right = 384.0
 margin_bottom = -32.0
 mouse_filter = 2
 
-[node name="MoreLikelyYesButton" type="Button" parent="InterfaceSwitch/Survey/Panel/Answers"]
+[node name="MoreLikelyYesButton" type="Button" parent="InterfaceSwitch/Survey/Panel/AnswersPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -349,7 +349,7 @@ anchor_bottom = 0.5
 margin_left = -384.0
 margin_top = 32.0
 margin_right = -8.0
-margin_bottom = 144.0
+margin_bottom = 128.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 3 )
 custom_styles/pressed = ExtResource( 4 )
@@ -359,54 +359,54 @@ custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
 text = "MORE_LIKELY_YES"
 
-[node name="DoNotKnowPanel" type="Panel" parent="InterfaceSwitch/Survey/Panel/Answers"]
+[node name="DoNotKnowPanel" type="Panel" parent="InterfaceSwitch/Survey/Panel/AnswersPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -144.0
-margin_top = -144.0
+margin_top = -128.0
 margin_right = 144.0
 margin_bottom = 16.0
 mouse_filter = 2
 
-[node name="DecorativePanel1" type="Panel" parent="InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
-margin_left = -176.0
+[node name="DecorativePanel1" type="Panel" parent="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel"]
+margin_left = -128.0
 margin_top = 16.0
 margin_right = -16.0
 margin_bottom = 32.0
 mouse_filter = 2
 
-[node name="CounterLabel" type="Label" parent="InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
+[node name="CounterLabel" type="Label" parent="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = -96.0
+margin_bottom = -88.0
 text = "0/0"
 align = 1
 valign = 1
 
-[node name="DecorativePanel2" type="Panel" parent="InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
+[node name="DecorativePanel2" type="Panel" parent="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel"]
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = 16.0
 margin_top = 16.0
-margin_right = 176.0
+margin_right = 128.0
 margin_bottom = 32.0
 mouse_filter = 2
 
-[node name="DoNotKnowButton" type="Button" parent="InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel"]
+[node name="DoNotKnowButton" type="Button" parent="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel"]
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
-margin_top = -96.0
+margin_top = -88.0
 margin_right = -16.0
 margin_bottom = -16.0
 focus_mode = 0
 enabled_focus_mode = 0
 text = "DO_NOT_KNOW"
 
-[node name="MoreLikelyNoButton" type="Button" parent="InterfaceSwitch/Survey/Panel/Answers"]
+[node name="MoreLikelyNoButton" type="Button" parent="InterfaceSwitch/Survey/Panel/AnswersPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -414,7 +414,7 @@ anchor_bottom = 0.5
 margin_left = 8.0
 margin_top = 32.0
 margin_right = 384.0
-margin_bottom = 144.0
+margin_bottom = 128.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 22 )
 custom_styles/pressed = ExtResource( 23 )
@@ -424,13 +424,13 @@ custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
 text = "MORE_LIKELY_NO"
 
-[node name="YesButton" type="Button" parent="InterfaceSwitch/Survey/Panel/Answers"]
+[node name="YesButton" type="Button" parent="InterfaceSwitch/Survey/Panel/AnswersPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -448.0
-margin_top = -96.0
+margin_left = -384.0
+margin_top = -80.0
 margin_right = -160.0
 margin_bottom = 16.0
 focus_mode = 0
@@ -442,14 +442,14 @@ custom_styles/normal = ExtResource( 3 )
 enabled_focus_mode = 0
 text = "YES"
 
-[node name="NoButton" type="Button" parent="InterfaceSwitch/Survey/Panel/Answers"]
+[node name="NoButton" type="Button" parent="InterfaceSwitch/Survey/Panel/AnswersPanel"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 160.0
-margin_top = -96.0
-margin_right = 448.0
+margin_top = -80.0
+margin_right = 384.0
 margin_bottom = 16.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 22 )
@@ -731,11 +731,11 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey" method="_on_restart"]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey/Panel/RestartButton" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/Answers/MoreLikelyYesButton" to="InterfaceSwitch/Survey" method="_on_more_likely_yes"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/Answers/DoNotKnowPanel/DoNotKnowButton" to="InterfaceSwitch/Survey" method="_on_do_not_know"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/Answers/MoreLikelyNoButton" to="InterfaceSwitch/Survey" method="_on_more_likely_no"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/Answers/YesButton" to="InterfaceSwitch/Survey" method="_on_yes"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/Answers/NoButton" to="InterfaceSwitch/Survey" method="_on_no"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyYesButton" to="InterfaceSwitch/Survey" method="_on_more_likely_yes"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel/DoNotKnowButton" to="InterfaceSwitch/Survey" method="_on_do_not_know"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyNoButton" to="InterfaceSwitch/Survey" method="_on_more_likely_no"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/YesButton" to="InterfaceSwitch/Survey" method="_on_yes"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/NoButton" to="InterfaceSwitch/Survey" method="_on_no"]
 [connection signal="pressed" from="InterfaceSwitch/Settings/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_language_selected"]
 [connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/ScalePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_scale_selected"]
