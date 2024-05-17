@@ -1,12 +1,12 @@
-extends "res://game/scripts/interfaces/interface.gd"
+extends Node
 
-onready var progress_bar = $Panel/ProgressBar
-onready var question_label = $Panel/QuestionLabel
-onready var do_not_know_counter_label = $Panel/Answers/DoNotKnowPanel/CounterLabel
-onready var do_not_know_button = $Panel/Answers/DoNotKnowPanel/DoNotKnowButton
-onready var restart_button = $Panel/RestartButton
+onready var progress_bar = $"../Panel/ProgressBar"
+onready var question_label = $"../Panel/QuestionLabel"
+onready var do_not_know_counter_label = $"../Panel/AnswersPanel/DoNotKnowPanel/CounterLabel"
+onready var do_not_know_button = $"../Panel/AnswersPanel/DoNotKnowPanel/DoNotKnowButton"
+onready var restart_button = $"../Panel/RestartButton"
 onready var interface_switch = $"%InterfaceSwitch"
-onready var result_interface = $"%Result"
+onready var result_controller = $"%ResultController"
 onready var tween = $Tween
 
 
@@ -64,5 +64,5 @@ func _on_do_not_know():
 
 
 func _on_finished(result):
-	result_interface.set_character(result)
+	result_controller.set_character(result)
 	interface_switch.set_visible_interface("Result")

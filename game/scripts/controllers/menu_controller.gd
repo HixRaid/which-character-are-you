@@ -1,6 +1,6 @@
-extends "res://game/scripts/interfaces/interface.gd"
+extends Node
 
-onready var quit_button = $Panel/QuitButton
+onready var quit_button = $"../Panel/QuitButton"
 
 
 func _ready():

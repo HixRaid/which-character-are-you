@@ -5,15 +5,15 @@
 [ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=3]
 [ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=4]
 [ext_resource path="res://game/resources/theme/fonts/types/game_name_dynamic_font.tres" type="DynamicFont" id=5]
-[ext_resource path="res://game/scripts/interfaces/result_interface.gd" type="Script" id=6]
-[ext_resource path="res://game/scripts/interfaces/settings_interface.gd" type="Script" id=7]
-[ext_resource path="res://game/scripts/interfaces/interface_switch.gd" type="Script" id=8]
-[ext_resource path="res://game/scripts/interfaces/menu_interface.gd" type="Script" id=9]
-[ext_resource path="res://game/scripts/interfaces/survey_interface.gd" type="Script" id=10]
-[ext_resource path="res://game/scripts/interfaces/interface.gd" type="Script" id=11]
+[ext_resource path="res://game/scripts/controllers/settings_controller.gd" type="Script" id=6]
+[ext_resource path="res://game/scripts/ui/interfaces/interface_switch.gd" type="Script" id=8]
+[ext_resource path="res://game/scripts/controllers/survey_controller.gd" type="Script" id=9]
+[ext_resource path="res://game/scripts/controllers/result_controller.gd" type="Script" id=10]
+[ext_resource path="res://game/scripts/ui/interfaces/interface.gd" type="Script" id=11]
 [ext_resource path="res://game/resources/theme/default_theme.tres" type="Theme" id=12]
-[ext_resource path="res://game/scripts/interfaces/restart_button.gd" type="Script" id=13]
+[ext_resource path="res://game/scripts/ui/restart_button.gd" type="Script" id=13]
 [ext_resource path="res://game/images/ui/info.tres" type="Texture" id=14]
+[ext_resource path="res://game/scripts/controllers/menu_controller.gd" type="Script" id=15]
 [ext_resource path="res://game/images/ui/play.tres" type="Texture" id=16]
 [ext_resource path="res://game/images/ui/settings.tres" type="Texture" id=17]
 [ext_resource path="res://game/images/ui/menu.tres" type="Texture" id=18]
@@ -111,10 +111,13 @@ open_interface = "Menu"
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 9 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="MenuController" type="Node" parent="InterfaceSwitch/Menu"]
+script = ExtResource( 15 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Menu"]
 anchor_right = 1.0
@@ -252,10 +255,15 @@ stretch_mode = 1
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="SurveyController" type="Node" parent="InterfaceSwitch/Survey"]
+script = ExtResource( 9 )
+
+[node name="Tween" type="Tween" parent="InterfaceSwitch/Survey/SurveyController"]
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Survey"]
 visible = false
@@ -460,16 +468,17 @@ custom_styles/normal = ExtResource( 22 )
 enabled_focus_mode = 0
 text = "NO"
 
-[node name="Tween" type="Tween" parent="InterfaceSwitch/Survey"]
-
 [node name="Settings" type="Control" parent="InterfaceSwitch"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 7 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="SettingsController" type="Node" parent="InterfaceSwitch/Settings"]
+script = ExtResource( 6 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Settings"]
 visible = false
@@ -647,14 +656,17 @@ valign = 1
 autowrap = true
 
 [node name="Result" type="Control" parent="InterfaceSwitch"]
-unique_name_in_owner = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
-script = ExtResource( 6 )
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ResultController" type="Node" parent="InterfaceSwitch/Result"]
+unique_name_in_owner = true
+script = ExtResource( 10 )
 
 [node name="Panel" type="Control" parent="InterfaceSwitch/Result"]
 visible = false
@@ -727,17 +739,17 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MainMenu/PlayPanel/PlayButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Survey" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MainMenu/InfoButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
-[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu" method="quit"]
+[connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu/MenuController" method="quit"]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey" method="_on_restart"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_restart"]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey/Panel/RestartButton" method="_on_pressed"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyYesButton" to="InterfaceSwitch/Survey" method="_on_more_likely_yes"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel/DoNotKnowButton" to="InterfaceSwitch/Survey" method="_on_do_not_know"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyNoButton" to="InterfaceSwitch/Survey" method="_on_more_likely_no"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/YesButton" to="InterfaceSwitch/Survey" method="_on_yes"]
-[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/NoButton" to="InterfaceSwitch/Survey" method="_on_no"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyYesButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_more_likely_yes"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/DoNotKnowPanel/DoNotKnowButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_do_not_know"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/MoreLikelyNoButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_more_likely_no"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/YesButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_yes"]
+[connection signal="pressed" from="InterfaceSwitch/Survey/Panel/AnswersPanel/NoButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_no"]
 [connection signal="pressed" from="InterfaceSwitch/Settings/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
-[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_language_selected"]
-[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/ScalePanel/OptionButton" to="InterfaceSwitch/Settings" method="_on_scale_selected"]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/LanguagePanel/OptionButton" to="InterfaceSwitch/Settings/SettingsController" method="_on_language_selected"]
+[connection signal="item_selected" from="InterfaceSwitch/Settings/Panel/Wrapper/SettingsPanel/ScalePanel/OptionButton" to="InterfaceSwitch/Settings/SettingsController" method="_on_scale_selected"]
 [connection signal="pressed" from="InterfaceSwitch/Info/Panel/BackButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="InterfaceSwitch/Result/Panel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Menu" ]]

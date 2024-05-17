@@ -1,8 +1,8 @@
-extends "res://game/scripts/interfaces/interface.gd"
+extends Node
 
-onready var character_image = $Panel/CharacterImage
-onready var name_label = $Panel/NameLabel
-onready var description_label = $Panel/DescriptionLabel
+onready var character_image = $"../Panel/CharacterImage"
+onready var name_label = $"../Panel/NameLabel"
+onready var description_label = $"../Panel/DescriptionLabel"
 
 
 func set_character(character):
