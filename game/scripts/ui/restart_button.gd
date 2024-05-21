@@ -1,7 +1,17 @@
 extends Button
 
-onready var icon_texture_rect = $Icon
+var icon_texture_rect
+
 onready var tween = $Tween
+
+
+func _enter_tree():
+	icon_texture_rect = $Icon
+
+
+func set_disabled(value):
+	disabled = value
+	icon_texture_rect.modulate = Color.white * 0.75 if value else Color.white
 
 
 func _on_pressed():

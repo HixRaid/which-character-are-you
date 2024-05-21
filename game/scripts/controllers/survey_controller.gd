@@ -28,7 +28,7 @@ func update_data():
 	
 	progress_bar.value = Survey.current_survey.passed
 	
-	restart_button.disabled = Survey.current_survey.passed == 0
+	restart_button.set_disabled(Survey.current_survey.passed == 0)
 	
 	do_not_know_button.disabled =  Survey.current_survey.do_not_know == Survey.current_survey.max_do_not_know
 	do_not_know_counter_label.text = str(Survey.current_survey.do_not_know) + "/" + str(Survey.current_survey.max_do_not_know)
