@@ -58,7 +58,8 @@ func vote(vote):
 func summarize():
 	var traits = []
 	for i in current_survey.traits:
-		traits.append(0.5 + i.value / i.count * 0.5)
+		traits.append(0.5 + i.value / i.count * 0.5 if i.count != 0 else 0)
+
 	
 	var min_score = 0xffffff
 	var min_score_character
