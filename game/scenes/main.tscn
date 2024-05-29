@@ -741,6 +741,7 @@ anims/play = SubResource( 2 )
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MainMenu/SettingsButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Settings" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/MainMenu/InfoButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Info" ]]
 [connection signal="pressed" from="InterfaceSwitch/Menu/Panel/QuitButton" to="InterfaceSwitch/Menu/MenuController" method="quit"]
+[connection signal="set_visible" from="InterfaceSwitch/Survey" to="InterfaceSwitch/Survey/SurveyController" method="_on_interface_set_visible"]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/MenuButton" to="InterfaceSwitch" method="set_visible_interface" binds= [ "Back" ]]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey/SurveyController" method="_on_restart"]
 [connection signal="pressed" from="InterfaceSwitch/Survey/Panel/RestartButton" to="InterfaceSwitch/Survey/Panel/RestartButton" method="_on_pressed"]

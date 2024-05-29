@@ -1,6 +1,7 @@
 extends Node
 
 signal finished(result)
+signal updated(fast)
 
 enum {
 	YES = 0,
@@ -17,10 +18,13 @@ var current_survey = {
 	"passed": 0
 }
 
+var is_finished = false
+
 onready var data = $Data
 
 
 func start():
+	is_finished = false
 	current_survey.traits.clear()
 	current_survey.do_not_know = 0
 	current_survey.max_do_not_know = int(len(data.QUESTIONS) * 0.5)
@@ -31,6 +35,7 @@ func start():
 			"value": 0,
 			"count": 0,
 		})
+	emit_signal("updated", true)
 
 
 func vote(vote):
@@ -52,7 +57,9 @@ func vote(vote):
 	
 	if current_survey.passed == len(data.QUESTIONS):
 		emit_signal("finished", summarize())
-		start()
+		is_finished = true
+	else:
+		emit_signal("updated", false)
 
 
 func summarize():

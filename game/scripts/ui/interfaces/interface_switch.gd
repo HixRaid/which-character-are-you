@@ -13,7 +13,7 @@ onready var animation_player = $"../AnimationPlayer"
 func _ready():
 	var children = get_children()
 	for i in children:
-		i.set_visibility(i.name ==  open_interface)
+		i.set_visible(i.name ==  open_interface)
 		interfaces.merge({i.name: i})
 	
 	story.append(open_interface)
@@ -30,9 +30,9 @@ func _notification(what):
 
 
 func _on_set_visible():
-	interfaces[open_interface].set_visibility(false)
+	interfaces[open_interface].set_visible(false)
 	open_interface = story[len(story) - 1]
-	interfaces[open_interface].set_visibility(true)
+	interfaces[open_interface].set_visible(true)
 
 
 func set_visible_interface(name):
