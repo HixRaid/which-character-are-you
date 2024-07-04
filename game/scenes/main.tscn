@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=2]
 
-[ext_resource path="res://game/resources/theme/fonts/types/description_dynamic_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://game/resources/theme/fonts/types/small_dynamic_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://game/resources/theme/fonts/types/question_dynamic_font.tres" type="DynamicFont" id=2]
 [ext_resource path="res://game/resources/theme/styles/green_normal_style.tres" type="StyleBox" id=3]
 [ext_resource path="res://game/resources/theme/styles/green_pressed_style.tres" type="StyleBox" id=4]
@@ -632,20 +632,61 @@ stretch_mode = 1
 [node name="Wrapper" type="Control" parent="InterfaceSwitch/Info/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_top = 72.0
+margin_top = 32.0
 mouse_filter = 2
 
-[node name="InfoPanel" type="Panel" parent="InterfaceSwitch/Info/Panel/Wrapper"]
+[node name="Control" type="Control" parent="InterfaceSwitch/Info/Panel/Wrapper"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -392.0
-margin_top = -208.0
+margin_top = -268.0
 margin_right = 392.0
-margin_bottom = 208.0
+margin_bottom = 268.0
+mouse_filter = 2
 
-[node name="Label" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/InfoPanel"]
+[node name="GameNameAndVersionPanel" type="Panel" parent="InterfaceSwitch/Info/Panel/Wrapper/Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -256.0
+margin_right = 256.0
+margin_bottom = 96.0
+mouse_filter = 2
+
+[node name="GameNameLabel" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/Control/GameNameAndVersionPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -40.0
+text = "GAME_NAME"
+align = 1
+valign = 2
+
+[node name="VersionLabel" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/Control/GameNameAndVersionPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 56.0
+margin_right = -16.0
+margin_bottom = -16.0
+custom_fonts/font = ExtResource( 1 )
+text = "v0.1 alpha"
+align = 1
+
+[node name="InfoPanel" type="Panel" parent="InterfaceSwitch/Info/Panel/Wrapper/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -392.0
+margin_top = -148.0
+margin_right = 392.0
+margin_bottom = 268.0
+
+[node name="Label" type="Label" parent="InterfaceSwitch/Info/Panel/Wrapper/Control/InfoPanel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 16.0
@@ -653,7 +694,6 @@ margin_top = 16.0
 margin_right = -16.0
 margin_bottom = -16.0
 text = "INFO"
-valign = 1
 autowrap = true
 
 [node name="Result" type="Control" parent="InterfaceSwitch"]
